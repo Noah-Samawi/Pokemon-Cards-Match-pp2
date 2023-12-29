@@ -1,0 +1,41 @@
+/* Heading */
+.heading {
+    width: 90%;
+    font-size: 2rem;
+    margin-top: 20px;
+    padding: 30px 0;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+    margin: 5px;
+   } 
+  /* Timer*/ 
+   #timer {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 5px;
+    width: 90%;
+    background-color: white;
+   }
+   
+
+/* Logo */
+.logo {
+    height: 40px;
+    padding-right: 5px;
+}
+#inputForm{
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 5px;
+    width: 90%;
+    background-color: white;
+}
