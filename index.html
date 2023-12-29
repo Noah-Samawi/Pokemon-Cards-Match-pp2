@@ -24,9 +24,18 @@
 
 <body>
     <h1 class="heading">
-        <img class="logo" src="assests/favicon/android-chrome-512x512.png" alt="logo"> Pokemon Cards Match
+        <img class="logo" src="assests/favicon/favicon.ico" alt="logo"> Pokemon Cards Match
     </h1>
-
+ <!--Name and Summit-->
+ <form id="inputForm">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Submit</button>
+</form>
+ <!--Timer-->
+<h1>
+    You have <span id="timer">0</span> seconds to answer..
+  </h1>
     <!--Errors--> 
     <h2>Errors: <span id="errors">0</span></h2>
     <!--Board--> 
