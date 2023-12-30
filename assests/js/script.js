@@ -49,5 +49,35 @@ function hideCards() {
 }
 
 function selectCard() {
+    // Check if the source (image URL) of the clicked card includes the string "back"
+    if (this.src.includes("back")) {
+        // If card1 is not selected, assign the clicked card to card1Selected
+        if (!card1Selected) {
+            card1Selected = this;
 
+            // Extract row and column coordinates from the card's ID
+            let coords = card1Selected.id.split("-"); //"0-1" -> ["0", "1"]
+            let r = parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+
+            // Set the source of the selected card to a specific image based on its position on the game board
+            card1Selected.src = board[r][c] + ".jpg";
+        }
+        // If card2 is not selected and the clicked card is different from card1
+        else if (!card2Selected && this != card1Selected) {
+            card2Selected = this;
+
+            // Extract row and column coordinates from the card's ID
+            let coords = card2Selected.id.split("-"); //"0-1" -> ["0", "1"]
+            let r = parseInt(coords[0]);
+            let c = parseInt(coords[1]);
+
+            // Set the source of the selected card to a specific image based on its position on the game board
+            card2Selected.src = board[r][c] + ".jpg";
+
+            // After a brief delay (1000 milliseconds or 1 second), call the "update" function
+            setTimeout(update, 1000);
+        }
+    }
 }
+
