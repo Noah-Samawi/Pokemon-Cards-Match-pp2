@@ -1,18 +1,33 @@
 /* Heading */
-.heading {
+#heading {
     width: 90%;
     font-size: 2rem;
+    margin: auto;
     margin-top: 20px;
     padding: 30px 0;
     background-color: white;
     border-radius: 10px;
     border: 1px solid black;
-    padding: 12px;
-    text-align: center;
-    margin: 5px;
-   } 
-
+}
+div {
+    display: block;
+}
    /* Body */
+
+
+
+body {
+    font-family: "Lora", sans-serif;
+    background-color: white;
+    text-align: center;
+    background: url("../images/pokemon-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    max-width: 2000px;
+    margin-left: 120px;
+}
+/*
 body {
     background: url("../images/pokemon-bg.jpg");
     font-family: "Lora", sans-serif;
@@ -25,9 +40,20 @@ body {
     margin-left: 120px;
 }
 
-/*Pokemon Section*/
-.pokemon-section{
-    background-color: rgba(155, 125, 136, 0.5);
+*/
+
+
+
+.btn-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 5px auto;
+    flex-direction: column;
+}
+.pokemon-section {
+    background-color: rgba(228, 205, 205, 0.5);
     box-sizing: border-box;
     width: 85%;
     max-width: 830px;
@@ -36,6 +62,7 @@ body {
     padding: 1%;
     border-radius: 10px;
 }
+
 
   /* Timer*/ 
    #timer {

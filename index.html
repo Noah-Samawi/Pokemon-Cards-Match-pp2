@@ -24,29 +24,46 @@
 
 <body>
      <!--Heading-->
-    <h1 class="heading">
-        <img class="logo" src="assests/favicon/favicon.ico" alt="logo"> Pokemon Cards Match
-    </h1>
- <!--Pokemon section-->
-    <div class="pokemon-section">
-        <p id="info"> Are you looking to interesting Pokemon card-matching game? <br> Well look no further, please
+     <div id="heading">
+        <div id="questions-area">Welcome to the Pokemon Cards Match</div>
+        <img class="logo" src="assests/favicon/favicon.ico" alt="logo"> 
+
+    </div>
+ 
+             <!-- rules and submit area -->
+             <div class="pokemon-section">
+                <p id="info" class=""> Are you looking to interesting Pokemon card-matching game? <br> Well look no further, please
     
-            enter your username to START.</p> 
- <!--Input Form-->
- <form id="inputForm">
-    <label for="name">Enter your name:</label>
-    <input type="text" id="name" name="name" required>
-    <button type="submit">Submit</button>
-</form>
-<div id="result"></div>
-<script>
-    document.getElementById("inputForm").addEventListener("submit", function(event) {
-        event.preventDefault();// Prevents the default form submission behavior
-        let name = document.getElementById("name").value;
-          // Display a personalized message in an HTML element with the id "result"
-        document.getElementById("result").innerHTML = `Welcome to the Pokemon Cards Match , ${name}!`;
-    });
-</script>
+                    enter your username to START.</p>
+                <!-- <button id="quiz-rules" class="btn">Rules</button> -->
+                <button id="quiz-rules" class="btn">Rules</button>
+
+                <!-- rules -->
+                <div id="rules-guide" class="hide">
+                    <h2>Instructions</h2>
+                    <h5>
+                        The goal of the game is to match pairs of cards with identical images.</h5>
+                    <p>
+                        
+                        1- Enter your name and press Submit, then press Start for the Cards Match to begin. <br>
+                        2- You have 15 seconds to answer each Cards Match .<br>
+                        3- Timer is displayed on Game area.<br>
+                        4- <b><u>If you don't answer in the 25 sec's the quiz will end.</u></b><br>
+                        5- Once an answer is selected, the correct answer will turn green.<br>
+                        6- It's required to select an answer to move on to the next question. <br>
+                        7- Answer all 10 questions to end quiz<br>
+                    </p>
+                <form id="inputForm">
+                    <label for="name" id="myLabel">Enter your name?</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <button type="button" id="submit" class="btn">Submit</button>
+                </form>
+                
+    
+                    <button id="close-btn" class="btn">Close</button>
+                </div>
+                <p id="finish-text-score" class="hide"></p>
+            </div>
 
  <!--Timer-->
 <h1>
