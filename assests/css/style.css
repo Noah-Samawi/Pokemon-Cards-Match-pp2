@@ -11,6 +11,32 @@
     text-align: center;
     margin: 5px;
    } 
+
+   /* Body */
+body {
+    background: url("../images/pokemon-bg.jpg");
+    font-family: "Lora", sans-serif;
+    background-color: white;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    max-width: 2000px;
+    margin-left: 120px;
+}
+
+/*Pokemon Section*/
+.pokemon-section{
+    background-color: rgba(155, 125, 136, 0.5);
+    box-sizing: border-box;
+    width: 85%;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    border-radius: 10px;
+}
+
   /* Timer*/ 
    #timer {
     padding: 12px;
@@ -30,14 +56,13 @@
     padding-right: 5px;
 }
 #inputForm{
-    padding: 12px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 1.2rem;
     margin: 5px;
     width: 90%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
     background-color: white;
+    font-size: 1.5rem;
 }
 #board {
     height: 532px;

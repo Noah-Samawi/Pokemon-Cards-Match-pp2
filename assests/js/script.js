@@ -1,4 +1,5 @@
- // Start timer
+
+  // Start timer
 let timer = 60; // Initial time set to 60 seconds
 document.getElementById("timer").innerText = timer; // Display initial time in an HTML element
 
@@ -27,9 +28,6 @@ let countdown = setInterval(function() {
         card2Selected = null;
     }
 }, 1000); // Set the interval to 1000 milliseconds (1 second)
-
-
- 
 var errors = 0;
 var cardList = [
     "darkness",
