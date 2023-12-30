@@ -45,8 +45,18 @@ function startGame() {
 }
 
 function hideCards() {
+    // Loop through each row (r) and column (c) in the game grid
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            // Generate the ID of the card based on its row and column, and retrieve the corresponding element
+            let card = document.getElementById(r.toString() + "-" + c.toString());
 
+            // Set the source (image) of the card to "back.jpg" to hide or reset its state
+            card.src = "back.jpg";
+        }
+    }
 }
+
 
 function selectCard() {
     // Check if the source (image URL) of the clicked card includes the string "back"
