@@ -26,19 +26,23 @@ window.onload = function() {
 }
 
 function shuffleCards() {
-
-    cardSet = cardList.concat(cardList); //Git the two of each card
+    // Duplicate the cardList to create a set of cards by concatenating it with itself
+    cardSet = cardList.concat(cardList);
     console.log(cardSet);
-    //shuffle card
+
+    // Shuffle the cards using the Fisher-Yates (Knuth) algorithm
     for (let i = 0; i < cardSet.length; i++) {
-        let j = Math.floor(Math.random() * cardSet.length); //get the random index
-        //swap
+        let j = Math.floor(Math.random() * cardSet.length); // Generate a random index
+
+        // Swap the positions of the cards at indices i and j
         let temp = cardSet[i];
         cardSet[i] = cardSet[j];
         cardSet[j] = temp;
     }
+
     console.log(cardSet);
 }
+
      
 function startGame() {
 
