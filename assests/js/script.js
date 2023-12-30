@@ -1,4 +1,35 @@
+ // Start timer
+let timer = 60; // Initial time set to 60 seconds
+document.getElementById("timer").innerText = timer; // Display initial time in an HTML element
 
+// Set up a countdown timer that updates every second
+let countdown = setInterval(function() {
+    timer--; // Decrease the timer by 1 second
+    document.getElementById("timer").innerText = timer; // Update the displayed timer value
+
+    // Check if the timer has reached or fallen below 0
+    if (timer <= 0) {
+        clearInterval(countdown); // Stop the countdown timer
+        alert("Game Over"); // Display a "Game Over" alert
+    }
+
+    // Check if two cards have been selected
+    if (card1Selected && card2Selected) {
+        errors += 1; // Increment the errors counter
+        document.getElementById("errors").innerText = errors; // Update the displayed error count
+
+        // Flip both selected cards back to their initial state
+        card1Selected.src = "back.jpg";
+        card2Selected.src = "back.jpg";
+
+        // Reset the references to the selected cards
+        card1Selected = null;
+        card2Selected = null;
+    }
+}, 1000); // Set the interval to 1000 milliseconds (1 second)
+
+
+ 
 var errors = 0;
 var cardList = [
     "darkness",

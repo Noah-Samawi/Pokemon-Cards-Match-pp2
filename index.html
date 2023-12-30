@@ -24,18 +24,29 @@
 
 <body>
     <h1 class="heading">
-        <img class="logo" src="assests/favicon/favicon.ico" alt="logo"> Welcone to Pokemon Cards Match
+        <img class="logo" src="assests/favicon/favicon.ico" alt="logo"> Pokemon Cards Match
     </h1>
- <!--Name and Summit-->
+ <!--Input Form-->
  <form id="inputForm">
     <label for="name">Enter your name:</label>
     <input type="text" id="name" name="name" required>
     <button type="submit">Submit</button>
 </form>
+<div id="result"></div>
+<script>
+    document.getElementById("inputForm").addEventListener("submit", function(event) {
+        event.preventDefault();// Prevents the default form submission behavior
+        let name = document.getElementById("name").value;
+          // Display a personalized message in an HTML element with the id "result"
+        document.getElementById("result").innerHTML = `Welcome to the Pokemon Cards Match , ${name}!`;
+    });
+</script>
+
  <!--Timer-->
 <h1>
     You have <span id="timer">0</span> seconds to answer..
   </h1>
+</div>
     <!--Errors--> 
     <h2>Errors: <span id="errors">0</span></h2>
     <!--Board--> 
