@@ -45,8 +45,40 @@ function shuffleCards() {
 
      
 function startGame() {
+    // Arrange the board in a 4x5 grid (presumably determined by 'rows' and 'columns' variables)
+    for (let r = 0; r < rows; r++) {
+        let row = [];
 
+        // For each column in the row
+        for (let c = 0; c < columns; c++) {
+            // Pop a card from the shuffled cardSet array
+            let cardImg = cardSet.pop();
+            row.push(cardImg);
+
+            // Create an <img> element for the card
+            let card = document.createElement("img");
+            card.id = r.toString() + "-" + c.toString();
+            card.src = cardImg + ".jpg";
+            card.classList.add("card");
+
+            // Attach a click event listener to the card, calling the 'selectCard' function
+            card.addEventListener("click", selectCard);
+
+            // Append the card element to the HTML element with the id "board"
+            document.getElementById("board").append(card);
+        }
+
+        // Add the row to the 'board' array
+        board.push(row);
+    }
+
+    // Log the initial state of the board to the console
+    console.log(board);
+
+    // After a delay of 1000 milliseconds (1 second), hide the cards
+    setTimeout(hideCards, 1000);
 }
+
 
 function hideCards() {
     // Loop through each row (r) and column (c) in the game grid
@@ -95,3 +127,19 @@ function selectCard() {
     }
 }
 
+function update() {
+    // If the selected cards have different images, flip both cards back
+    if (card1Selected.src != card2Selected.src) {
+        // Set the source of both selected cards to "back.jpg"
+        card1Selected.src = "back.jpg";
+        card2Selected.src = "back.jpg";
+
+        // Increment the 'errors' counter and update the corresponding HTML element
+        errors += 1;
+        document.getElementById("errors").innerText = errors;
+    }
+
+    // Reset the references to the selected cards
+    card1Selected = null;
+    card2Selected = null;
+}
