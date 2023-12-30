@@ -1,1 +1,16 @@
-console.log("connected!")
+function shuffleCards() {
+
+
+}
+     
+function startGame() {
+
+}
+
+function hideCards() {
+
+}
+
+function selectCard() {
+    
+}
