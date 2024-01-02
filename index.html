@@ -64,6 +64,25 @@
                 </div>
                 <p id="finish-text-score" class="hide"></p>
             </div>
+            <script>
+                document.getElementById("submit").addEventListener("click", function () {
+                    var playerName = document.getElementById("name").value;
+                    if (playerName.trim() !== "") {
+                        // Perform actions with the submitted name, e.g., start the game
+                        console.log("Player name:", playerName);
+                    }
+                });
+        
+                document.getElementById("close-btn").addEventListener("click", function () {
+                    document.getElementById("rules-guide").classList.add("hide");
+                });
+        
+                // You can add an event listener to another button to display the rules again
+                // Example:
+                // document.getElementById("show-rules-btn").addEventListener("click", function () {
+                //     document.getElementById("rules-guide").classList.remove("hide");
+                // });
+            </script>
 
  <!--Timer-->
 <h1>
