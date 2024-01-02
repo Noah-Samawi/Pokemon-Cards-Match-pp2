@@ -1,117 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokemon Cards Match game">
+    <meta name="keywords" content="game, Pokemon, Cards Match game">
 
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-    
-   <link rel="stylesheet" href="assests/css/style.css">
-    <title>Pokemon Cards Match</title>
+    <title>Welcome to the Pokemon Cards Match</title>
 
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assests/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assests/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assests/favicon/favicon-16x16.png">
-    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="assest/css/style.css">
+    <!-- Favicon from favicon.io -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assest/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assest/images/favicon/favicon-32x32.png">
+    <style>
+                    
+    </style>
 </head>
 
-
-
 <body>
-     <!--Heading-->
-     <div id="heading">
-        <div id="questions-area">Welcome to the Pokemon Cards Match</div>
-        <img class="logo" src="assests/favicon/favicon.ico" alt="logo"> 
-
-    </div>
- 
-             <!-- rules and submit area -->
-             <div class="pokemon-section">
-                <p id="info" class=""> Are you looking to interesting Pokemon card-matching game? <br> Well look no further, please
     
-                    enter your username to START.</p>
-                <!-- <button id="quiz-rules" class="btn">Rules</button> -->
-                <button id="quiz-rules" class="btn">Rules</button>
+    <!-- Content wrapper game backgrounds -->
+    <div class="content-wrapper" id="scene-background">
 
-                <!-- rules -->
-                <div id="rules-guide" class="hide">
-                    <h2>Instructions</h2>
-                    <h5>
-                        The goal of the game is to match pairs of cards with identical images.</h5>
-                    <p>
-                        
-                        1- Enter your name and press Submit, then press Start for the Cards Match to begin. <br>
-                        2- You have 15 seconds to answer each Cards Match .<br>
-                        3- Timer is displayed on Game area.<br>
-                        4- <b><u>If you don't answer in the 25 sec's the quiz will end.</u></b><br>
-                        5- Once an answer is selected, the correct answer will turn green.<br>
-                        6- It's required to select an answer to move on to the next question. <br>
-                        7- Answer all 10 questions to end quiz<br>
-                    </p>
-                <form id="inputForm">
-                    <label for="name" id="myLabel">Enter your name?</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <button type="button" id="submit" class="btn">Submit</button>
-                </form>
+        <!-- Information bar -->
+
+        <div class="info-bar hide" id="info-bar">
+            <div class="home-button">
+                <a href="index.html" aria-label="Go to the home page"><i class="fas fa-home"></i></a>
                 
-    
-                    <button id="close-btn" class="btn">Close</button>
-                </div>
-                <p id="finish-text-score" class="hide"></p>
             </div>
-            <script>
-                document.getElementById("submit").addEventListener("click", function () {
-                    var playerName = document.getElementById("name").value;
-                    if (playerName.trim() !== "") {
-                        // Perform actions with the submitted name, e.g., start the game
-                        console.log("Player name:", playerName);
-                    }
-                });
-        
-                document.getElementById("close-btn").addEventListener("click", function () {
-                    document.getElementById("rules-guide").classList.add("hide");
-                });
-        
-                // You can add an event listener to another button to display the rules again
-                // Example:
-                // document.getElementById("show-rules-btn").addEventListener("click", function () {
-                //     document.getElementById("rules-guide").classList.remove("hide");
-                // });
-            </script>
+            <div class="score-area" id="score-area">
+                <div class="incorrect-attempts">
+                    <i class="far fa-frown"><span id="counter">0</span></i>
+                </div>
+                <div>
+                    <i class="far fa-clock"></i><span id='timer'>0</span>
+                </div>
+            </div>
+        </div>
 
- <!--Timer-->
-<h1>
-    You have <span id="timer">0</span> seconds to answer..
-  </h1>
-</div>
-    <!--Errors--> 
+        <!-- Landing page welcome section -->
+        <section id="welcome-area">
+            <h1 class="heading">Welcome to the Pokémon Cards Match </h1>
+            <div class="button-outer">
+                <button class='button' id='instructions-btn' aria-label="Go to the instructions-area">Rules</button>
+                <br>
+                <button class='button' id='play-btn' aria-label="Play the game">Play</button>
+            </div>
+            
+        </section>
+
+        <!-- Instructions/Rules Section-->
+        <section class="hide" id="instructions-area">
+            <div>
+                <h2 class="select-level">How to Play</h2>
+            </div>
+            <div class="instructions">
+                <p>The goal of the game is to match pairs of cards with identical images.</p>
+                <p>Cards are randomly shuffled and placed face down on the board at the start of the game.</p>
+                <ol>
+                    <li>Players reveal cards by clicking on them.</li>
+                    <li>Clicking on a face-down card reveals its image for a brief moment</li>
+                    <li>Players must remember the locations and images of the revealed cards.</li>
+                    <li>When you have selected all of the cards match the game will end and you will see your score</li>
+                </ol>
+            </div>
+            <div class="button-outer">
+                <a href="index.html" aria-label="Go back to home page">
+                    <div class='button'>Back</div>
+                </a>
+            </div>
+        </section>
+
+         <!-- Play Game Section -->
+         <section class="hide" id="game-area">
+            <div>
+                <div class="box-title">
+                    <h2>Select <span id="game-selected">Cards Match</span> Pokemon as fast as you can!</h2>
+            </div>
+            
+        </section>
+
+        <!-- Gameover Section -->
+       <!-- Game section -->
+
+       
+<section>
+
+    <!-- Timer -->
+    <h1>
+        You have <span id="timer">0</span> seconds to answer..
+      </h1>
+      
+    <!-- Errors -->
     <h2>Errors: <span id="errors">0</span></h2>
-    <!--Board--> 
+
+    <!-- Board -->
     <div id="board"></div>
 
-    <script src="assests/js/script.js"></script>
+</section>
+
+<section class="hide" id="gameover">
+    <div class="box-title">
+        <h2>Game Over</h2>
+    </div>
+    <div class="scores-wrapper">
+        <!-- Final Game scores -->
+        <div class="final-scores">
+            <p>Your Time:</p>
+            <p id="final-time"></p>
+        </div>
+        <div class="final-scores">
+            <p>Incorrect Attempts(Errors):</p>
+            <p id="final-count"></p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/08445b6b20.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript script -->
+    <script src="assest/js/script.js"></script>
+    <script>
+        
+
+// Start timer
+let timer = 60; // Initial time set to 60 seconds
+document.getElementById("timer").innerText = timer; // Display initial time in an HTML element
+
+// Set up a countdown timer that updates every second
+let countdown = setInterval(function() {
+    timer--; // Decrease the timer by 1 second
+    document.getElementById("timer").innerText = timer; // Update the displayed timer value
+
+    // Check if the timer has reached or fallen below 0
+    if (timer <= 0) {
+        clearInterval(countdown); // Stop the countdown timer
+        alert("Game Over"); // Display a "Game Over" alert
+    }
+
+    // Check if two cards have been selected
+    if (card1Selected && card2Selected) {
+        errors += 1; // Increment the errors counter
+        document.getElementById("errors").innerText = errors; // Update the displayed error count
+
+        // Flip both selected cards back to their initial state
+        card1Selected.src = "back.jpg";
+        card2Selected.src = "back.jpg";
+
+        // Reset the references to the selected cards
+        card1Selected = null;
+        card2Selected = null;
+    }
+}, 1000); // Set the interval to 1000 milliseconds (1 second)
+
+    </script>
+ 
 </body>
- <!--footer section-->
- <footer>
-    <ul id="social-network">
-        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                aria-label="Visit our Facebook Page (opens in a new tab)"><i
-                    class="fa-brands fa-facebook fa-2xl"></i></a></li>
-        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                aria-label="Visit our Instagram Page (opens in a new tab)"><i
-                    class="fa-brands fa-instagram fa-2xl"></i></a></li>
-        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                aria-label="Visit our Youtube Page (opens in a new tab)"><i
-                    class="fa-brands fa-youtube fa-2xl"></i></a></li>
-        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener"
-                aria-label="Visit our Linkedin Page (opens in a new tab)"><i
-                    class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-    </ul>
-</footer>
-<script src="https://kit.fontawesome.com/e91176a207.js" crossorigin="anonymous"></script>
+
 </html>

@@ -1,140 +1,226 @@
-/* Heading */
-#heading {
-    width: 90%;
-    font-size: 2rem;
-    margin: auto;
-    margin-top: 20px;
-    padding: 30px 0;
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-div {
-    display: block;
-}
-   /* Body */
 
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,200;0,300;0,500;1,200&family=Roboto+Mono:wght@300&display=swap');
 
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-family: Poppins, "sans-serif";
+        }
 
-body {
-    font-family: "Lora", sans-serif;
-    background-color: white;
-    text-align: center;
-    background: url("../images/pokemon-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 50px;
-    max-width: 2000px;
-    margin-left: 120px;
-}
-/*
-body {
-    background: url("../images/pokemon-bg.jpg");
-    font-family: "Lora", sans-serif;
-    background-color: white;
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 50px;
-    max-width: 2000px;
-    margin-left: 120px;
-}
+        body {
+            background: url('../images/main-image.webp') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-*/
+        h2 {
+            font-weight: bold;
+            font-size: 25px;
+        }
 
+        .content-wrapper {
+            width: 800px;
+            border-radius: 10px;
+            background-color: #da6ef0;
+            text-align: center;
+        }
 
+        .hide {
+            display: none;
+        }
 
-.btn-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 5px auto;
-    flex-direction: column;
-}
-.pokemon-section {
-    background-color: rgba(228, 205, 205, 0.5);
-    box-sizing: border-box;
-    width: 85%;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-    border-radius: 10px;
-}
+        .button-outer {
+            margin-bottom: 20px;
+        }
 
+        .button {
+            background-color: #3467FF;
+            font-size: 25px;
+            color: #ACBE0F;
+            border: 5px solid #ACBE0F;
+            border-radius: 10px;
+            font-family: 'Mochiy Pop P One', sans-serif;
+            line-height: 1.75rem;
+            padding: .75rem 1.65rem;
+            width: 100%;
+            max-width: 250px;
+            cursor: pointer;
+            margin: 20px 20px 0 20px;
+            display: inline-block;
+        }
 
-  /* Timer*/ 
-   #timer {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    margin: 5px;
-    width: 90%;
-    background-color: white;
-   }
-   
+        .button:hover {
+  background-color: #da6ef0;        }
 
-/* Logo */
-.logo {
-    height: 40px;
-    padding-right: 5px;
-}
-#inputForm{
-    margin: 5px;
-    width: 90%;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: white;
-    font-size: 1.5rem;
-}
-#board {
-    height: 532px;
-    width: 475px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-    border: 10px solid lightgrey;
-}
+        /* Welcome Area */
+        .heading {
+            font-family: 'Mochiy Pop P One', sans-serif;
+            font-size: 40px;
+            text-align: center;
+            color: #ACBE0F;
+            letter-spacing: 2px;
+            padding: 30px;
+        }
 
-.card {
-    height: 128px;
-    width: 90px;
-    margin: 2.5px;
-}
+        /* Instructions Section */
+        .instructions {
+            
+            font-size: 17px;
+            margin: 10px 30px;
+        }
 
-/* Footer */
-footer {
-    background-color: #c8c9ce;
-}
+        .instructions p {
+            padding: 0 20px 20px 20px;
+        }
 
-#social-network {
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1.2rem 0;
-    list-style: none;
-}
+        .instructions ol {
+            padding: 20px;
+            background-color: #33f4ba;
+            border-radius: 10px;
+        }
 
-#social-network i {
-    font-size: 160%;
-    padding: 5%;
-    color: #05386f;
-}
+        .instructions li {
+            list-style-type: circle;
+            font-size: 16px;
+            padding: 5px 0;
+            margin: 0 20px;
+            text-align: left;
+        }
 
-/*social media icon hover actions*/
-#social-network i:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-}
+        /* Game Section */
+       
 
+        #board {
+            height: 532px;
+            width: 400px;
+            margin: 0 auto;
+            display: fixd;
+            flex-wrap: wrap;
+            background-color: whitesmoke;
+            border: 10px solid lightgrey;
+        }
+        
+        .card {
+            height: 128px;
+            width: 90px;
+            margin: 2px;
+        }
 
-/*social media icon hover actions*/
-#social-network i:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-}
+        /* Timer */
+        #timer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #timer-container i {
+            margin-right: 2px;
+            font-size: 1rem;
+        }
+
+        #timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Media Queries */
+
+        /* For iPad/tablet sizes from 768px wide and down */
+        @media screen and (max-width: 768px) {
+            .content-wrapper {
+                width: 500px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            .heading {
+                font-size: 30px;
+            }
+
+            .leaderboard-table {
+                width: 70%;
+            }
+
+            .select-game-area .button-image {
+                height: 100px;
+            }
+
+            .card-area {
+                margin: 30px 20px 0px 20px;
+            }
+
+            .card-area-hard {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .card {
+                height: 140px;
+                width: 140px;
+                background-size: 130px 130px;
+            }
+
+            .card-hard {
+                height: 100px;
+                width: 100px;
+                background-size: 90px 90px;
+            }
+
+            .scores-wrapper {
+                margin: 30px 40px;
+            }
+
+            .final-scores {
+                width: 130px;
+                height: 130px;
+                padding: 10px;
+            }
+        }
+
+        /* For mobile device sizes from 480px wide and down */
+        @media screen and (max-width: 480px) {
+            .content-wrapper {
+                width: 100%;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .button-outer {
+                margin-bottom: 20px;
+            }
+
+            .heading {
+                font-size: 25px;
+                padding: 10px 10px 0 10px;
+            }
+
+            .instructions {
+                padding: 0;
+            }
+
+            .instructions p {
+                padding: 0 0 20px 0;
+                font-size: 16px;
+            }
+
+            .instructions ol {
+                padding: 20px;
+            }
+
+            .instructions li {
+                margin: 0 5px;
+                font-size: 15px
+            }}

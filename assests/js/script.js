@@ -1,33 +1,20 @@
+let instructions = document.getElementById("instructions-area");
+let timerElement = document.getElementById('timer'); // Add this line
+let welcomeArea = document.getElementById('welcome-area'); // Add this line
 
-  // Start timer
-let timer = 60; // Initial time set to 60 seconds
-document.getElementById("timer").innerText = timer; // Display initial time in an HTML element
 
-// Set up a countdown timer that updates every second
-let countdown = setInterval(function() {
-    timer--; // Decrease the timer by 1 second
-    document.getElementById("timer").innerText = timer; // Update the displayed timer value
-
-    // Check if the timer has reached or fallen below 0
-    if (timer <= 0) {
-        clearInterval(countdown); // Stop the countdown timer
-        alert("Game Over"); // Display a "Game Over" alert
-    }
-
-    // Check if two cards have been selected
-    if (card1Selected && card2Selected) {
-        errors += 1; // Increment the errors counter
-        document.getElementById("errors").innerText = errors; // Update the displayed error count
-
-        // Flip both selected cards back to their initial state
-        card1Selected.src = "back.jpg";
-        card2Selected.src = "back.jpg";
-
-        // Reset the references to the selected cards
-        card1Selected = null;
-        card2Selected = null;
-    }
-}, 1000); // Set the interval to 1000 milliseconds (1 second)
+// When the DOM finishes loading, get the buttons and add event listeners to them
+document.addEventListener("DOMContentLoaded", function () {
+    // Show the Rules section
+    let instructionsBtn = document.getElementById('instructions-btn');
+    instructionsBtn.addEventListener('click', function () {
+        instructions.classList.remove('hide');
+        welcomeArea.classList.add('hide');
+    });
+});  
+     
+ // Game section
+// Game section
 var errors = 0;
 var cardList = [
     "darkness",
@@ -41,19 +28,36 @@ var cardList = [
     "psychic",
     "water"
 ]
-
 var cardSet;
 var board = [];
 var rows = 4;
-var columns =5;
+var columns = 5;
 var card1Selected;
 var card2Selected;
 
-window.onload = function() {
+window.onload = function () {
     shuffleCards();
     startGame();
 }
 
+// ... (existing functions remain unchanged)
+
+function startGame() {
+    // Start the timer
+    startTimer();
+
+    // After a delay of 1000 milliseconds (1 second), hide the cards
+    setTimeout(hideCards, 1000);
+}
+
+function startTimer() {
+    // Use setInterval to update the timer every second
+    timer = 0;
+    setInterval(function () {
+        timer++;
+        timerElement.innerText = timer;
+    }, 1000);
+}
 function shuffleCards() {
     // Duplicate the cardList to create a set of cards by concatenating it with itself
     cardSet = cardList.concat(cardList);
@@ -171,4 +175,17 @@ function update() {
     // Reset the references to the selected cards
     card1Selected = null;
     card2Selected = null;
+}
+
+
+// Add the following function to check if the game is won
+function checkGameWon() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (document.getElementById(r.toString() + "-" + c.toString()).src.includes("back")) {
+                return false; // At least one card is still face down
+            }
+        }
+    }
+    return true; // All cards are face up
 }
