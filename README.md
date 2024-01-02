@@ -1,3 +1,4 @@
+
 # The Pokémon Cards Match 
 
 Welcome to the Pokémon Cards Match project! This is a simple web-based card-matching game featuring Pokémon cards.
@@ -74,11 +75,6 @@ The live link can be found here - [ The Pokémon Cards Match Game]( https://noah
 
 Table of Contents
 
-- [Pokemon Cards Match](#pokemon-cards-match)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Features](#features)
-  - [Installation](#installation)
 - [The Pokémon Cards Match](#the-pokémon-cards-match)
     - [Rules for the Memory-Matching Game:](#rules-for-the-memory-matching-game)
       - [Objective:](#objective)
@@ -99,7 +95,7 @@ Table of Contents
     - [Colour Scheme](#colour-scheme)
     - [Fonts](#fonts)
     - [Layout](#layout)
-  - [Features](#features-1)
+  - [Features](#features)
     - [Home Page](#home-page)
     - [How to Play Page](#how-to-play-page)
     - [Game Selection](#game-selection)
@@ -125,7 +121,6 @@ Table of Contents
   - [Deployment](#deployment)
   - [Cloning](#cloning)
   - [Credits](#credits)
-    - [Content](#content)
     - [Media](#media)
     - [Resources Used](#resources-used)
   - [Acknowledgments](#acknowledgments)
