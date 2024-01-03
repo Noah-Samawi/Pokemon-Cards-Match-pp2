@@ -3,7 +3,7 @@
 
 Welcome to the Pokémon Cards Match project! This is a simple web-based card-matching game featuring Pokémon cards.
 
-### Rules for the Memory-Matching Game:
+## Rules for the Memory-Matching Game:
 
 #### Objective:
 
@@ -62,75 +62,74 @@ The goal of the game is to match pairs of cards with identical images.
 - The game is considered complete when all pairs are successfully matched.
 - Remember, the success of the game depends on memory and pattern recognition skills. Players aim to minimize errors and complete the game as efficiently as possible.
 
-
-
-
-
-
-
-
 The live link can be found here - [ The Pokémon Cards Match Game]( https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/)
 
-![APokémon Cards Match Game Am I Responsive Image](assests/images/am_i_responsive.png) 
+![APokémon Cards Match Game Am I Responsive Image](assest/images/am_i_responsive.png) 
 
 Table of Contents
 
-- [The Pokémon Cards Match](#the-pokémon-cards-match)
-    - [Rules for the Memory-Matching Game:](#rules-for-the-memory-matching-game)
-      - [Objective:](#objective)
-      - [Board Setup:](#board-setup)
-    - [Gameplay:](#gameplay)
-    - [Matching:](#matching)
-    - [Errors:](#errors)
-    - [Winning:](#winning)
-    - [Game Flow:](#game-flow)
-    - [User Interface:](#user-interface)
-    - [Technical Details:](#technical-details)
-    - [Game Initialization:](#game-initialization)
-    - [Game Completion:](#game-completion)
-  - [Site Owner Goals](#site-owner-goals)
-  - [User Stories](#user-stories)
-  - [Design](#design)
-    - [Imagery](#imagery)
-    - [Colour Scheme](#colour-scheme)
-    - [Fonts](#fonts)
-    - [Layout](#layout)
-  - [Features](#features)
-    - [Home Page](#home-page)
-    - [How to Play Page](#how-to-play-page)
-    - [Game Selection](#game-selection)
-    - [Game Area](#game-area)
-    - [Game Over](#game-over)
-    - [Features Left to Implement](#features-left-to-implement)
-  - [Testing](#testing)
-    - [Validator Testing](#validator-testing)
-    - [Accessibility](#accessibility)
-    - [Input Testing](#input-testing)
-    - [Button Testing](#button-testing)
-    - [Game Testing](#game-testing)
-    - [Browser Testing](#browser-testing)
-    - [Device Testing](#device-testing)
-    - [Fixed Bugs](#fixed-bugs)
-      - [SetTimeout() method on incorrect cards](#settimeout-method-on-incorrect-cards)
+- [The Pokémon Cards Match](#the-pok-mon-cards-match)
+  * [Rules for the Memory-Matching Game:](#rules-for-the-memory-matching-game-)
+      - [Objective:](#objective-)
+      - [Board Setup:](#board-setup-)
+    + [Gameplay:](#gameplay-)
+    + [Matching:](#matching-)
+    + [Errors:](#errors-)
+    + [Winning:](#winning-)
+    + [Game Flow:](#game-flow-)
+    + [User Interface:](#user-interface-)
+    + [Technical Details:](#technical-details-)
+    + [Game Initialization:](#game-initialization-)
+    + [Game Completion:](#game-completion-)
+  * [Site Owner Goals](#site-owner-goals)
+  * [User Stories](#user-stories)
+    + [First Time User](#first-time-user)
+    + [Returning user](#returning-user)
+    + [Returning user](#returning-user-1)
+  * [Design](#design)
+    + [Imagery](#imagery)
+    + [Colour Scheme](#colour-scheme)
+    + [Fonts](#fonts)
+    + [Layout](#layout)
+  * [Features](#features)
+    + [Home Page](#home-page)
+    + [How to Play Page](#how-to-play-page)
+    + [Game Selection](#game-selection)
+    + [Game Area](#game-area)
+    + [Game Over](#game-over)
+    + [Features Left to Implement](#features-left-to-implement)
+  * [Testing](#testing)
+    + [Validator Testing](#validator-testing)
+      - [HTML](#html)
+      - [CSS](#css)
+      - [Javascript](#javascript)
+    + [Accessibility](#accessibility)
+    + [Input Testing](#input-testing)
+    + [Button Testing](#button-testing)
+    + [Game Testing](#game-testing)
+    + [Browser Testing](#browser-testing)
+    + [Device Testing](#device-testing)
+    + [Fixed Bugs](#fixed-bugs)
+      - [SetTimeout() method on incorrect cards](#settimeout---method-on-incorrect-cards)
       - [Making a Deep Clone of an Object](#making-a-deep-clone-of-an-object)
       - [Username Input Data Validation](#username-input-data-validation)
-    - [Known Bugs](#known-bugs)
-  - [Technologies Used](#technologies-used)
-    - [Languages](#languages)
-    - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
-  - [Deployment](#deployment)
-  - [Cloning](#cloning)
-  - [Credits](#credits)
-    - [Media](#media)
-    - [Resources Used](#resources-used)
-  - [Acknowledgments](#acknowledgments)
+    + [Known Bugs](#known-bugs)
+  * [Technologies Used](#technologies-used)
+    + [Languages](#languages)
+    + [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+  * [Deployment](#deployment)
+  * [Cloning](#cloning)
+  * [Credits](#credits)
+    + [Media](#media)
+    + [Resources Used](#resources-used)
+  * [Acknowledgments](#acknowledgments)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Site Owner Goals
 To provide the user with an easy to navigate game that is both fun and educational.
 - To present the user with a website that is visually appealing and fully responsive.
-- To allow the user to choose from a selection of habitats and.
 - Invoke a sense of urgency to complete the game as quickly as possible. 
 
 ## User Stories
@@ -142,9 +141,7 @@ To provide the user with an easy to navigate game that is both fun and education
 
 
 - ### Returning user
-  - As a returning user I want to be able to play the same game without getting the same selection of animals.
-  - As a returning user I want to be able to play a different game (different habitat).
-  - As a returning user I want to be able to save my score to the leaderboard.
+  - As a returning user I want to be able to play the same game without getting the same selection of Pokémon.
 
 - ### Returning user
   - As a returning user I want to be able to play the same game without getting the same selection of cards.
@@ -152,7 +149,7 @@ To provide the user with an easy to navigate game that is both fun and education
 ## Design
 
 ### Imagery
-- The imagery and colour scheme of the site were both given careful consideration to ensure they compliment each other. The imagery used in the game is very important to the overall experience of the user. 
+- The imagery and colour scheme of the site were both given careful consideration to ensure they compliment each other. 
 
 ### Colour Scheme
 
