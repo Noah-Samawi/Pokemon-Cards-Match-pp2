@@ -256,14 +256,14 @@ If the user clicks the "Rules" button the instructions section appears and the u
 ### Validator Testing
 - #### HTML
     - No errors were returned when passing through the official W3C Markup Validator
-        - [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Faliokeeffe.github.io%2FThe-Animal-Association-Game%2F)
+        - [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnoah-samawi.github.io%2FPokemon-Cards-Match-pp2%2F)
 - #### CSS
     - No errors were found when passing through the official W3C CSS Validator 
-        - [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faliokeeffe.github.io%2FThe-Animal-Association-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+        - [W3C CSS Validator Results]()
 - #### Javascript
     - No errors or warnings were returned when passing through the the [JSHint Validator](https://jshint.com/)
 
-  ![JSHint Validator Results](docs/readme_images/jshint_validator.png)
+  ![JSHint Validator Results](jshint_validator.png)
   
 
 ### Accessibility 
