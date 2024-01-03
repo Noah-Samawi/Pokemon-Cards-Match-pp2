@@ -114,21 +114,20 @@
         }
 
         /* Timer */
-        #timer-container {
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin-top: 20px;
-        }
-
-        #timer-container i {
-            margin-right: 2px;
-            font-size: 1rem;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
 
         #timer {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: bold;
+            color: #333;
         }
 
         /* Media Queries */

@@ -76,26 +76,48 @@
         </section>
 
          <!-- Play Game Section -->
-         <section class="hide" id="game-area">
-            <div>
-                <div class="box-title">
-                    <h2>Select <span id="game-selected">Cards Match</span> Pokemon as fast as you can!</h2>
-            </div>
-            
-        </section>
+         
 
         <!-- Gameover Section -->
+
+
        <!-- Game section -->
-
-       
 <section>
-
+    <canvas id="canvas" style="display:none"></canvas> 
+    <div id="start" style="display:none">
+        <a href="#" onclick="startGame()">Start Game</a>
+    </div>
+    <div id="game-over" style="display:none">
+        <h1>Game Over</h1>
+        <a href="#" onclick="startGame()">Start Game</a>
+    </div>
     <!-- Timer -->
-    <h1>
-        You have <span id="timer">0</span> seconds to answer..
-      </h1>
-      
+    <div id="timer">00:00</div>
+    <script>
+        let time = 0;
+        let timer = document.getElementById('timer');
+
+        function updateTime() {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            timer.textContent = minutes + ':' + seconds;
+
+            time++;
+        }
+
+        function startTimer() {
+            setInterval(updateTime, 1000);
+        }
+        
+        startTimer();
+    </script>
+
     <!-- Errors -->
+
     <h2>Errors: <span id="errors">0</span></h2>
 
     <!-- Board -->
@@ -107,7 +129,7 @@
     <div class="box-title">
         <h2>Game Over</h2>
     </div>
-    <div class="scores-wrapper">
+
         <!-- Final Game scores -->
         <div class="final-scores">
             <p>Your Time:</p>
@@ -127,7 +149,7 @@
     <!-- JavaScript script -->
     <script src="assest/js/script.js"></script>
     <script>
-
+        
 
     </script>
  
