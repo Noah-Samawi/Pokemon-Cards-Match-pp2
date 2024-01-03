@@ -167,7 +167,7 @@ The Poppins font is the main font used throughout the whole website. This font w
 Sans Serif is used as a backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 ### Layout
-The site is a single page with 6 sections:
+The site is a single page with 4 sections:
   - Welcome area
   - Rules
   - Play game
@@ -200,13 +200,13 @@ The landing page of the website has a very simple layout which includes a H1 hea
  - Play
   
 
- ![Landing Page](landing_page.png)
+ ![Landing Page](assest/images/landing_page.png)
 
-### How to Play Page
+### Rules Page
 
 If the user clicks the "Rules" button the instructions section appears and the user can read the main rules of the game. The back button will take them back to the welcome area.
 
-![Instructions](/instructions_section.png)
+![Instructions](assest/images/instructions_section.png)
 
 ### Game Selection
 
