@@ -3,7 +3,7 @@
 
 Welcome to the Pokémon Cards Match project! This is a simple web-based card-matching game featuring Pokémon cards.
 
-## Rules for the Memory-Matching Game:
+### Rules for the Memory-Matching Game:
 
 #### Objective:
 
@@ -62,74 +62,75 @@ The goal of the game is to match pairs of cards with identical images.
 - The game is considered complete when all pairs are successfully matched.
 - Remember, the success of the game depends on memory and pattern recognition skills. Players aim to minimize errors and complete the game as efficiently as possible.
 
+
+
+
+
+
+
+
 The live link can be found here - [ The Pokémon Cards Match Game]( https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/)
 
-![APokémon Cards Match Game Am I Responsive Image](assest/images/am_i_responsive.png) 
+![APokémon Cards Match Game Am I Responsive Image](assests/images/am_i_responsive.png) 
 
 Table of Contents
 
-- [The Pokémon Cards Match](#the-pok-mon-cards-match)
-  * [Rules for the Memory-Matching Game:](#rules-for-the-memory-matching-game-)
-      - [Objective:](#objective-)
-      - [Board Setup:](#board-setup-)
-    + [Gameplay:](#gameplay-)
-    + [Matching:](#matching-)
-    + [Errors:](#errors-)
-    + [Winning:](#winning-)
-    + [Game Flow:](#game-flow-)
-    + [User Interface:](#user-interface-)
-    + [Technical Details:](#technical-details-)
-    + [Game Initialization:](#game-initialization-)
-    + [Game Completion:](#game-completion-)
-  * [Site Owner Goals](#site-owner-goals)
-  * [User Stories](#user-stories)
-    + [First Time User](#first-time-user)
-    + [Returning user](#returning-user)
-    + [Returning user](#returning-user-1)
-  * [Design](#design)
-    + [Imagery](#imagery)
-    + [Colour Scheme](#colour-scheme)
-    + [Fonts](#fonts)
-    + [Layout](#layout)
-  * [Features](#features)
-    + [Home Page](#home-page)
-    + [How to Play Page](#how-to-play-page)
-    + [Game Selection](#game-selection)
-    + [Game Area](#game-area)
-    + [Game Over](#game-over)
-    + [Features Left to Implement](#features-left-to-implement)
-  * [Testing](#testing)
-    + [Validator Testing](#validator-testing)
-      - [HTML](#html)
-      - [CSS](#css)
-      - [Javascript](#javascript)
-    + [Accessibility](#accessibility)
-    + [Input Testing](#input-testing)
-    + [Button Testing](#button-testing)
-    + [Game Testing](#game-testing)
-    + [Browser Testing](#browser-testing)
-    + [Device Testing](#device-testing)
-    + [Fixed Bugs](#fixed-bugs)
-      - [SetTimeout() method on incorrect cards](#settimeout---method-on-incorrect-cards)
+- [The Pokémon Cards Match](#the-pokémon-cards-match)
+    - [Rules for the Memory-Matching Game:](#rules-for-the-memory-matching-game)
+      - [Objective:](#objective)
+      - [Board Setup:](#board-setup)
+    - [Gameplay:](#gameplay)
+    - [Matching:](#matching)
+    - [Errors:](#errors)
+    - [Winning:](#winning)
+    - [Game Flow:](#game-flow)
+    - [User Interface:](#user-interface)
+    - [Technical Details:](#technical-details)
+    - [Game Initialization:](#game-initialization)
+    - [Game Completion:](#game-completion)
+  - [Site Owner Goals](#site-owner-goals)
+  - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Imagery](#imagery)
+    - [Colour Scheme](#colour-scheme)
+    - [Fonts](#fonts)
+    - [Layout](#layout)
+  - [Features](#features)
+    - [Home Page](#home-page)
+    - [How to Play Page](#how-to-play-page)
+    - [Game Selection](#game-selection)
+    - [Game Area](#game-area)
+    - [Game Over](#game-over)
+    - [Features Left to Implement](#features-left-to-implement)
+  - [Testing](#testing)
+    - [Validator Testing](#validator-testing)
+    - [Accessibility](#accessibility)
+    - [Input Testing](#input-testing)
+    - [Button Testing](#button-testing)
+    - [Game Testing](#game-testing)
+    - [Browser Testing](#browser-testing)
+    - [Device Testing](#device-testing)
+    - [Fixed Bugs](#fixed-bugs)
+      - [SetTimeout() method on incorrect cards](#settimeout-method-on-incorrect-cards)
       - [Making a Deep Clone of an Object](#making-a-deep-clone-of-an-object)
       - [Username Input Data Validation](#username-input-data-validation)
-    + [Known Bugs](#known-bugs)
-  * [Technologies Used](#technologies-used)
-    + [Languages](#languages)
-    + [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
-  * [Deployment](#deployment)
-  * [Cloning](#cloning)
-  * [Credits](#credits)
-    + [Media](#media)
-    + [Resources Used](#resources-used)
-  * [Acknowledgments](#acknowledgments)
+    - [Known Bugs](#known-bugs)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+  - [Deployment](#deployment)
+  - [Cloning](#cloning)
+  - [Credits](#credits)
+    - [Media](#media)
+    - [Resources Used](#resources-used)
+  - [Acknowledgments](#acknowledgments)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## Site Owner Goals
 To provide the user with an easy to navigate game that is both fun and educational.
 - To present the user with a website that is visually appealing and fully responsive.
+- To allow the user to choose from a selection of habitats and.
 - Invoke a sense of urgency to complete the game as quickly as possible. 
 
 ## User Stories
@@ -141,7 +142,9 @@ To provide the user with an easy to navigate game that is both fun and education
 
 
 - ### Returning user
-  - As a returning user I want to be able to play the same game without getting the same selection of Pokémon.
+  - As a returning user I want to be able to play the same game without getting the same selection of animals.
+  - As a returning user I want to be able to play a different game (different habitat).
+  - As a returning user I want to be able to save my score to the leaderboard.
 
 - ### Returning user
   - As a returning user I want to be able to play the same game without getting the same selection of cards.
@@ -149,7 +152,7 @@ To provide the user with an easy to navigate game that is both fun and education
 ## Design
 
 ### Imagery
-- The imagery and colour scheme of the site were both given careful consideration to ensure they compliment each other. 
+- The imagery and colour scheme of the site were both given careful consideration to ensure they compliment each other. The imagery used in the game is very important to the overall experience of the user. 
 
 ### Colour Scheme
 
@@ -167,7 +170,7 @@ The Poppins font is the main font used throughout the whole website. This font w
 Sans Serif is used as a backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 ### Layout
-The site is a single page with 4 sections:
+The site is a single page with 6 sections:
   - Welcome area
   - Rules
   - Play game
@@ -200,13 +203,13 @@ The landing page of the website has a very simple layout which includes a H1 hea
  - Play
   
 
- ![Landing Page](assest/images/landing_page.png)
+ ![Landing Page](landing_page.png)
 
-### Rules Page
+### How to Play Page
 
 If the user clicks the "Rules" button the instructions section appears and the user can read the main rules of the game. The back button will take them back to the welcome area.
 
-![Instructions](assest/images/instructions_section.png)
+![Instructions](/instructions_section.png)
 
 ### Game Selection
 
@@ -256,14 +259,14 @@ If the user clicks the "Rules" button the instructions section appears and the u
 ### Validator Testing
 - #### HTML
     - No errors were returned when passing through the official W3C Markup Validator
-        - [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnoah-samawi.github.io%2FPokemon-Cards-Match-pp2%2F)
+        - [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Faliokeeffe.github.io%2FThe-Animal-Association-Game%2F)
 - #### CSS
     - No errors were found when passing through the official W3C CSS Validator 
-        - [W3C CSS Validator Results]()
+        - [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faliokeeffe.github.io%2FThe-Animal-Association-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - #### Javascript
     - No errors or warnings were returned when passing through the the [JSHint Validator](https://jshint.com/)
 
-  ![JSHint Validator Results](jshint_validator.png)
+  ![JSHint Validator Results](docs/readme_images/jshint_validator.png)
   
 
 ### Accessibility 
