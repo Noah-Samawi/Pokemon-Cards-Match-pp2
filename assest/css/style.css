@@ -1,229 +1,581 @@
+/* Google Fonts */
 
-        /* Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,200;0,300;0,500;1,200&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,200;0,300;0,500;1,200&family=Roboto+Mono:wght@300&display=swap');
 
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-size: 20px;
-            font-family: Poppins, "sans-serif";
-        }
+/* Global Styles */
 
-        body {
-            background: url('../images/main-image.webp') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Poppins, "sans-serif";
+}
+.content-wrapper {
+    width: 800px;
+    border-radius: 10px;  
+    background: url(../images/main-image.webp) no-repeat center center;
+    text-align: center;
+}
 
-        h2 {
-            font-weight: bold;
-            font-size: 25px;
-        }
+.hide {
+    display: none;
+}
 
-        .content-wrapper {
-            width: 800px;
-            border-radius: 10px;
-            background-color: #da6ef0;
-            text-align: center;
-        }
+body {
+  background: url("../images/background-image.jpeg") no-repeat center center !important;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-      
+h2,
+h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
 
-        .button-outer {
-            margin-bottom: 20px;
-        }
+.button-outer {
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: #4444fe;
+  text-align: center;
+}
 
-        .button {
-            background-color: #3467FF;
-            font-size: 25px;
-            color: #ACBE0F;
-            border: 5px solid #ACBE0F;
-            border-radius: 10px;
-            font-family: 'Mochiy Pop P One', sans-serif;
-            line-height: 1.75rem;
-            padding: .75rem 1.65rem;
-            width: 100%;
-            max-width: 250px;
-            cursor: pointer;
-            margin: 20px 20px 0 20px;
-            display: inline-block;
-        }
+.button-outer {
+  margin-bottom: 20px;
+}
 
-        .button:hover {
-  background-color: #da6ef0;        }
+.button {
+  background-color: hsl(225, 100%, 60%);
+  font-size: 25px;
+  color: #acbe0f;
+  border: 5px solid #acbe0f;
+  border-radius: 10px;
+  font-family: "Mochiy Pop P One", sans-serif;
+  line-height: 1.75rem;
+  padding: 0.5rem 1.65rem;
+  width: 80%;
+  max-width: 250px;
+  cursor: pointer;
+  margin: 20px 20px 0 20px;
+  display: inline-block;
+}
+.button:hover {
+    transform: translate(0, 0)
+}
 
-        /* Welcome Area */
-        .heading {
-            font-family: 'Mochiy Pop P One', sans-serif;
-            font-size: 40px;
-            text-align: center;
-            color: #ACBE0F;
-            letter-spacing: 2px;
-            padding: 30px;
-        }
+.button:hover {
+  background-color: #f1ef80;
+  border: 2px solid transparent;
+  color: indigo;
+  transform: scale(1.05);
+  will-change: transform;
+}
 
-        /* Instructions Section */
-        .instructions {
-            
-            font-size: 17px;
-            margin: 10px 30px;
-        }
+/* Welcome Area */
 
-        .instructions p {
-            padding: 0 20px 20px 20px;
-        }
+.heading {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #acbe0f;
+  letter-spacing: 2px;
+  padding: 20px;
+  width: 800px;
+  border-radius: 10px;
+  background-color: #4444fe;
+}
+input[type="text"] {
+  background-color: #c6e3da;
+  font-size: 15px;
+  border: 5px solid #acbe0f;
+  border-radius: 10px;
+  font-family: "Mochiy Pop P One", sans-serif;
+  line-height: 1.75rem;
+  padding: 0.4rem 1.65rem;
+  width: 80%;
+  max-width: 250px;
+  cursor: pointer;
+  margin: 15px 15px 0 15px;
+  display: inline-block;
+}
+#crab-text {
+  font-size: 150%;
+  font-weight: 800;
+}
 
-        .instructions ol {
-            padding: 20px;
-            background-color: #33f4ba;
-            border-radius: 10px;
-        }
+p {
+    font-size: 100%;
+    font-weight:800;
+  }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden !important;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 
-        .instructions li {
-            list-style-type: circle;
-            font-size: 16px;
-            padding: 5px 0;
-            margin: 0 20px;
-            text-align: left;
-        }
+/* Area with the buttons: button to Start and button to Reset */
 
-        /* Game Section */
-       .hide {
-            display: none !important;
-       }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
-       .no-background{
-        background-color: transparent !important;
-       }
+button {
+  background-color: #e91e63;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
 
-        #board {
-            height: 532px;
-            width: 400px;
-            margin: 0 auto;
-            display: fixed;
-            flex-wrap: wrap;
-            background-color: #f5f5f5;
-            border: 10px solid lightgrey;
-        }
-        
-        .card {
-            height: 128px;
-            width: 90px;
-            margin: 2px;
-        }
+button:disabled {
+  background-color: #f1f1f1;
+  color: #acacac;
+}
 
-        /* Timer */
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
+.pink-btn:disabled {
+  cursor: not-allowed;
+  color: white;
+  background-color: #e09dd0;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+}
 
-        #timer {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #333;
-        }
+/*Timer Stop Reset*/
 
-        /* Media Queries */
+#timer {
+    font-size: 24px;
+}
+.dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1000;
+}
+.dialog p {
+    margin-bottom: 10px;
+}
+.dialog button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.dialog button:hover {
+    background-color: #45a049;
+}
 
-        /* For iPad/tablet sizes from 768px wide and down */
-        @media screen and (max-width: 768px) {
-            .content-wrapper {
-                width: 500px;
-            }
+/* Instructions Section */
 
-            h2 {
-                font-size: 23px;
-            }
+#instructions-area{
 
-            .heading {
-                font-size: 30px;
-            }
+    width: 800px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: #4444fe;
+    text-align: center;
+}
+.instructions {
+  font-size: 17px;
+  margin: 10px 30px;
+}
 
-            .leaderboard-table {
-                width: 70%;
-            }
+.instructions p {
+  padding: 0 20px 20px 20px;
+}
 
-            .select-game-area .button-image {
-                height: 100px;
-            }
+.instructions ol {
+  padding: 20px;
+  background-color: #33f4ba;
+  border-radius: 10px;
+  
+    height: 200px;
+}
 
-            .card-area {
-                margin: 30px 20px 0px 20px;
-            }
+.instructions li {
+  list-style-type: circle;
+  font-size: 16px;
+  padding: 5px 0;
+  margin: 0 20px;
+  text-align: left;
+}
 
-            .card-area-hard {
-                width: 100%;
-                margin-top: 30px;
-            }
+/* Info bar with home button, incorrect attempts and timer */
 
-            .card {
-                height: 140px;
-                width: 140px;
-                background-size: 130px 130px;
-            }
+.info-bar {
+    background-color: #1e497e;
+    height: 70px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;    
+}
 
-            .card-hard {
-                height: 100px;
-                width: 100px;
-                background-size: 90px 90px;
-            }
+.home-button i {
+    color: white;
+    font-size: 30px;
+    float: left;
+    padding: 20px 10px 10px 20px;
+    cursor: pointer;
+}
 
-            .scores-wrapper {
-                margin: 30px 40px;
-            }
+.score-area {
+    float: right;
+    color: white; 
+    padding-right: 20px;
+}
 
-            .final-scores {
-                width: 130px;
-                height: 130px;
-                padding: 10px;
-            }
-        }
+.score-area div {
+    float: left;
+    padding: 20px 10px 10px 10px;
+}
 
-        /* For mobile device sizes from 480px wide and down */
-        @media screen and (max-width: 480px) {
-            .content-wrapper {
-                width: 100%;
-                margin: 10px;
-            }
+.score-area i {
+    color: white;
+    font-size: 30px;
+    margin-right: 10px; 
+}
 
-            h2 {
-                font-size: 20px;
-            }
+#timer {
+    font-family: 'Roboto Mono', monospace;
+}
 
-            .button-outer {
-                margin-bottom: 20px;
-            }
 
-            .heading {
-                font-size: 25px;
-                padding: 10px 10px 0 10px;
-            }
 
-            .instructions {
-                padding: 0;
-            }
+/* Game Section */
 
-            .instructions p {
-                padding: 0 0 20px 0;
-                font-size: 16px;
-            }
+.hide {
+  display: none !important;
+}
 
-            .instructions ol {
-                padding: 20px;
-            }
+.no-background {
+  background-color: transparent !important;
+}
+.game-eara {
+  font-size: 17px;
+  margin: 10px 30px;
+}
 
-            .instructions li {
-                margin: 0 5px;
-                font-size: 15px
-            }}
+.game-eara {
+  padding: 0 20px 20px 20px;
+}
+
+.game-eara {
+  padding: 10px;
+  background-color: #c6e3da;
+  border-radius: 10px;
+}
+
+.game-eara {
+  list-style-type: circle;
+  font-size: 16px;
+  padding: 5px 0;
+  margin: 0 20px;
+  text-align: left;
+}
+
+#board {
+  height: 645px;
+  width: 360px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  border: 10px solid lightgrey;
+}
+
+.card {
+  height: 118px;
+  width: 80px;
+  margin: 2px;
+  background-color: #c6e3da;
+}
+
+/* Game Over Section 
+
+.scores-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 70px;
+}
+
+.final-scores {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    background: #f4b333;
+    border-radius: 10%;
+    padding: 20px;
+    color: #053A32;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.safari .final-scores {
+    background-color: #053A32;
+    color: #FEAA0D;
+}
+
+#final-time, #final-count {
+    font-size: 18px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #e40066;
+    text-transform: uppercase
+}*/
+
+/* Media Queries */
+
+/* For mobile device sizes from 480px wide and down */
+@media screen and (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: 20px;
+    }
+
+    .button-outer {
+        margin-bottom: 20px;
+    }
+
+    .heading {
+        font-size: 25px;
+        padding: 10px 10px 0 10px;
+    }
+
+    .instructions {
+        padding: 0;
+    }
+
+    .instructions p {
+        padding: 0 0 20px 0;
+        font-size: 16px;
+    }
+
+    .instructions ol {
+        padding: 20px;
+    }
+
+    .instructions li {
+        margin: 0 5px;
+        font-size: 15px;
+    }
+
+    #instructions-area {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .select-level {
+        font-size: 20px;
+        padding: 20px 0 0 0;
+    }
+
+    #board {
+        width: 80%;
+    }
+}
+
+/* For mobile device sizes from 320px wide and down */
+@media screen and (max-width: 320px) {
+    * {
+        font-size: 15px;
+    }
+
+    .content-wrapper {
+        height: 90vh;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .heading {
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+
+    .card-area {
+        margin: 20px 0 0 0;
+    }
+
+    .card {
+        height: 90px;
+        width: 90px;
+        background-size: 80px 80px;
+    }
+
+    .card-hard {
+        height: 70px;
+        width: 70px;
+        background-size: 60px 60px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #final-time,
+    #final-count {
+        font-size: 15px;
+    }
+}
+
+/* For Landscape mobile device sizes from 425px height and down */
+@media screen and (max-height: 425px) {
+    * {
+        font-size: 15px;
+    }
+
+    .content-wrapper {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .heading {
+        padding: 30px 30px 10px 30px;
+    }
+
+    .instructions {
+        margin: 0 10px;
+    }
+
+    .instructions p {
+        padding: 0 0 20px 0;
+        font-size: 16px;
+    }
+
+    .instructions ol {
+        padding: 0 20px;
+    }
+
+    .instructions li {
+        margin: 0 5px;
+        font-size: 15px;
+    }
+
+    .leaderboard-table {
+        margin: 10px 0;
+    }
+
+    .card-area {
+        padding: 40px 0;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .card {
+        height: 120px;
+        width: 120px;
+        background-size: 110px 110px;
+    }
+
+    .card-hard {
+        height: 90px;
+        width: 90px;
+        background-size: 80px 80px;
+        margin: 0 10px 10px 10px;
+    }
+
+    #final-time,
+    #final-count {
+        font-size: 15px;
+    }
+
+    .scores-wrapper {
+        margin: 20px 40px;
+    }
+
+    .final-scores {
+        height: 90px;
+        padding: 5px;
+    }
+}
+
+/* For Landscape mobile device sizes from 320px height and down */
+@media screen and (max-height: 320px) {
+    .heading {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .button {
+        font-size: 20px;
+        line-height: 1rem;
+        max-width: 200px;
+        margin: 10px 20px 0 20px;
+    }
+
+    .instructions li {
+        font-size: 13px;
+    }
+
+    .select-game-area .button-image {
+        height: 80px;
+    }
+
+    .card-area {
+        padding: 30px 0;
+        margin: 10px 20px 0px 20px;
+    }
+
+    .card-area-hard {
+        padding: 0;
+        margin: 10px;
+        width: 70%;
+    }
+
+    .card {
+        height: 100px;
+        width: 100px;
+        background-size: 90px 90px;
+    }
+
+    .card-hard {
+        height: 80px;
+        width: 80px;
+        background-size: 70px 70px;
+        margin: 3px;
+    }
+
+    .final-scores {
+        height: 80px;
+    }
+
+    #username {
+        padding: 5px;
+    }
+}

@@ -1,7 +1,8 @@
 let instructions = document.getElementById("instructions-area");
 let timerElement = document.getElementById('timer'); // Add this line
 let welcomeArea = document.getElementById('welcome-area'); // Add this line
-
+let timer = 0;
+let timerInterval;
 
 // When the DOM finishes loading, get the buttons and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
@@ -35,21 +36,21 @@ var rows = 4;
 var columns = 5;
 var card1Selected;
 var card2Selected;
-let timerInterval = null;
+
 
 window.onload = function () {
     shuffleCards();
     //startGame();
 }
 
-// ... (existing functions remain unchanged)
+// 
 
 function startTimer() {
-    // Use setInterval to update the timer every second
-    timer = 0;
-    timerInterval = setInterval(function () {
+    timerInterval = setInterval(() => {
         timer++;
-        timerElement.innerText = timer + ' Seconds';
+        const minutes = Math.floor(timer / 60);
+        const seconds = timer % 60;
+        document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }, 1000);
 }
 function shuffleCards() {
@@ -186,8 +187,36 @@ function checkGameWon() {
     if (matches == 10){
         alert('You win the game!!!');
         clearInterval(timerInterval);
+        
     }
 }
+
+function showModal() {
+    const timerText = document.getElementById('timer').textContent;
+
+    // Create a custom dialog box
+    const modal = document.createElement('div');
+    modal.className = 'dialog';
+
+    // Add the timer result text to the dialog box
+    const modalText = document.createElement('p');
+    modalText.textContent = `Timer result: ${timerText}`;
+    modal.appendChild(modalText);
+
+    // Add a button to close the dialog box
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.onclick = () => {
+        document.body.removeChild(modal);
+    };
+    modal.appendChild(closeButton);
+
+    // Add the dialog box to the body of the document
+    document.body.appendChild(modal);
+}
+
+document.getElementById('stopBtn').addEventListener('click', showModal);
+document.getElementById('resetBtn').addEventListener('click', showModal);
 
 
 document.getElementById('play-btn').addEventListener('click', startGame);
