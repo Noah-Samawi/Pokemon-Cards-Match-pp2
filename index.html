@@ -37,7 +37,7 @@
                     <i class="far fa-frown"><span id="counter">0</span></i>
                 </div>
                 <div>
-                    <i class="far fa-clock"></i><span id='timer'>0</span>
+                    <i class="far fa-clock"></i><span id='timer-end'>0</span>
                 </div>
             </div>
         </div>
@@ -82,46 +82,19 @@
 
 
        <!-- Game section -->
-<section>
+<section class="hide" id="board-wrapper">
     <canvas id="canvas" style="display:none"></canvas> 
-    <div id="start" style="display:none">
-        <a href="#" onclick="startGame()">Start Game</a>
-    </div>
-    <div id="game-over" style="display:none">
-        <h1>Game Over</h1>
-        <a href="#" onclick="startGame()">Start Game</a>
-    </div>
     <!-- Timer -->
     <div id="timer">00:00</div>
-    <script>
-        let time = 0;
-        let timer = document.getElementById('timer');
-
-        function updateTime() {
-            let minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            timer.textContent = minutes + ':' + seconds;
-
-            time++;
-        }
-
-        function startTimer() {
-            setInterval(updateTime, 1000);
-        }
-        
-        startTimer();
-    </script>
 
     <!-- Errors -->
 
     <h2>Errors: <span id="errors">0</span></h2>
 
+    <a href="index.html" class="button">Go back</a>
+
     <!-- Board -->
-    <div id="board"></div>
+    <div id="board" ></div>
 
 </section>
 

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
  // Game section
 // Game section
 var errors = 0;
+let matches = 0;
 var cardList = [
     "darkness",
     "double",
@@ -34,28 +35,21 @@ var rows = 4;
 var columns = 5;
 var card1Selected;
 var card2Selected;
+let timerInterval = null;
 
 window.onload = function () {
     shuffleCards();
-    startGame();
+    //startGame();
 }
 
 // ... (existing functions remain unchanged)
 
-function startGame() {
-    // Start the timer
-    startTimer();
-
-    // After a delay of 1000 milliseconds (1 second), hide the cards
-    setTimeout(hideCards, 1000);
-}
-
 function startTimer() {
     // Use setInterval to update the timer every second
     timer = 0;
-    setInterval(function () {
+    timerInterval = setInterval(function () {
         timer++;
-        timerElement.innerText = timer;
+        timerElement.innerText = timer + ' Seconds';
     }, 1000);
 }
 function shuffleCards() {
@@ -78,6 +72,8 @@ function shuffleCards() {
 
      
 function startGame() {
+    // Start the timer
+    startTimer();
     // Arrange the board in a 4x5 grid (presumably determined by 'rows' and 'columns' variables)
     for (let r = 0; r < rows; r++) {
         let row = [];
@@ -110,6 +106,9 @@ function startGame() {
 
     // After a delay of 1000 milliseconds (1 second), hide the cards
     setTimeout(hideCards, 1000);
+    document.getElementById('scene-background').classList.add('no-background');
+    document.getElementById('board-wrapper').classList.remove('hide');
+    document.getElementById('welcome-area').classList.add('hide');
 }
 
 
@@ -156,6 +155,7 @@ function selectCard() {
 
             // After a brief delay (1000 milliseconds or 1 second), call the "update" function
             setTimeout(update, 1000);
+            setTimeout(checkGameWon, 1000);
         }
     }
 }
@@ -171,6 +171,9 @@ function update() {
         errors += 1;
         document.getElementById("errors").innerText = errors;
     }
+    else{
+        matches = matches + 1;
+    }
 
     // Reset the references to the selected cards
     card1Selected = null;
@@ -180,12 +183,11 @@ function update() {
 
 // Add the following function to check if the game is won
 function checkGameWon() {
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < columns; c++) {
-            if (document.getElementById(r.toString() + "-" + c.toString()).src.includes("back")) {
-                return false; // At least one card is still face down
-            }
-        }
+    if (matches == 10){
+        alert('You win the game!!!');
+        clearInterval(timerInterval);
     }
-    return true; // All cards are face up
 }
+
+
+document.getElementById('play-btn').addEventListener('click', startGame);
