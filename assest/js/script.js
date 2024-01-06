@@ -40,8 +40,7 @@ var card2Selected;
 
 window.onload = function () {
     shuffleCards();
-    //startGame();
-}
+};
 
 // 
 
@@ -56,7 +55,7 @@ function startTimer() {
 function shuffleCards() {
     // Duplicate the cardList to create a set of cards by concatenating it with itself
     cardSet = cardList.concat(cardList);
-    console.log(cardSet);
+    //console.log(cardSet);
 
     // Shuffle the cards using the Fisher-Yates (Knuth) algorithm
     for (let i = 0; i < cardSet.length; i++) {
@@ -68,7 +67,7 @@ function shuffleCards() {
         cardSet[j] = temp;
     }
 
-    console.log(cardSet);
+    //console.log(cardSet);
 }
 
      
@@ -103,7 +102,7 @@ function startGame() {
     }
 
     // Log the initial state of the board to the console
-    console.log(board);
+    //console.log(board);
 
     // After a delay of 1000 milliseconds (1 second), hide the cards
     setTimeout(hideCards, 1000);
@@ -112,6 +111,15 @@ function startGame() {
     document.getElementById('welcome-area').classList.add('hide');
 }
 
+function reStartGame(){
+    errors = 0;
+    matches = 0
+    document.getElementById("board").innerHTML = '';
+    document.getElementById('errors').innerText = 0;
+    stopTimer();
+    shuffleCards();
+    startGame();
+}
 
 function hideCards() {
     // Loop through each row (r) and column (c) in the game grid
@@ -185,13 +193,19 @@ function update() {
 // Add the following function to check if the game is won
 function checkGameWon() {
     if (matches == 10){
-        alert('You win the game!!!');
         clearInterval(timerInterval);
-        
+        showModal();
     }
 }
 
+function stopTimer(){
+    clearInterval(timerInterval);
+    timer = 0;
+    timerInterval = null;
+}
+
 function showModal() {
+    stopTimer();
     const timerText = document.getElementById('timer').textContent;
 
     // Create a custom dialog box
@@ -200,14 +214,15 @@ function showModal() {
 
     // Add the timer result text to the dialog box
     const modalText = document.createElement('p');
-    modalText.textContent = `Timer result: ${timerText}`;
+    modalText.innerHTML = `<h3> Game Over </h3> <br> <h6>Timer result: ${timerText} </h6> <br> <h6>Incorrect attempts: ${errors} </h6>`;
     modal.appendChild(modalText);
 
     // Add a button to close the dialog box
     const closeButton = document.createElement('button');
-    closeButton.textContent = 'Close';
+    closeButton.textContent = 'Play Again';
     closeButton.onclick = () => {
         document.body.removeChild(modal);
+        reStartGame();
     };
     modal.appendChild(closeButton);
 
@@ -215,8 +230,5 @@ function showModal() {
     document.body.appendChild(modal);
 }
 
-document.getElementById('stopBtn').addEventListener('click', showModal);
-document.getElementById('resetBtn').addEventListener('click', showModal);
-
-
+document.getElementById('resetBtn').addEventListener('click', reStartGame);
 document.getElementById('play-btn').addEventListener('click', startGame);
