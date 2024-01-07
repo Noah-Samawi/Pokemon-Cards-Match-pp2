@@ -211,8 +211,6 @@ If the user clicks the "Rules" button the instructions section appears and the u
 
 ![Game Selection](assest/images/sections/game-section.png)
 
-<details>
-
 ### Game Over
 - The section shows the players score which includes their time, number of incorrect attempts.
 
