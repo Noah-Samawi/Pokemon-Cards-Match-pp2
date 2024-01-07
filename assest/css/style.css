@@ -24,7 +24,7 @@
 }
 
 body {
-    background: url("../images/main-image.jpeg") no-repeat center center;
+    background: url("../images/main-image2.jpeg") no-repeat center center;
     background-size: cover !important;
     display: flex;
     justify-content: center;
@@ -70,13 +70,13 @@ h1 {
 }
 
 button:hover {
-    background-color: #b3ffcc;
+    background-color: #33f4ba;
     /* Adjusted color on hover */
     transform: scale(1.05);
 }
 
 .button {
-    background-color: #9bf3bd;
+    background-color: #33f4ba;
     font-size: 25px;
     color: #000;
     border: 5px solid #000;
@@ -112,7 +112,7 @@ button:hover {
     letter-spacing: 2px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #9bf3bd;
+    background-color: #33f4ba;
 }
 
 #crab-text {
