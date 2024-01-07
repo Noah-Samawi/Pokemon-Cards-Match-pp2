@@ -66,14 +66,14 @@ h1 {
   
   height: 400px;
   border-radius: 10px;
-  background-color: #35ebff;
+  background-color: #82f6af;
   text-align: center;
 }
 .button-outer {
   margin-bottom: 20px;
 }
 .button {
-  background-color: #35ebff;
+  background-color: #c8ffaa;
   font-size: 25px;
   color: #000;
   border: 5px solid #000;
