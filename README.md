@@ -234,7 +234,7 @@ If the user clicks the "Rules" button the instructions section appears and the u
 - #### Javascript
     - No errors or warnings were returned when passing through the the [JSHint Validator](https://jshint.com/)
 
-  ![JSHint Validator Results](docs/readme_images/jshint_validator.png)
+  ![JSHint Validator Results](assest/images/sections/jshint_validator.png)
   
 
 ### Accessibility 
