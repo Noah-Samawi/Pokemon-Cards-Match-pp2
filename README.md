@@ -66,7 +66,7 @@ The goal of the game is to match pairs of cards with identical images.
 
 The live link can be found here - [ The Pokémon Cards Match Game]( https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/)
 
-![APokémon Cards Match Game Am I Responsive Image](https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/) 
+![APokémon Cards Match Game Am I Responsive Image](assest/images/sections/am_i_responsive.png) 
 
 Table of Contents
 
@@ -76,7 +76,7 @@ Table of Contents
       - [Board Setup:](#board-setup)
     - [Gameplay:](#gameplay)
     - [Matching:](#matching)
-    - [Errors:](#errors)
+    - [Incorrect Attempts:](#incorrect-attempts)
     - [Winning:](#winning)
     - [Game Flow:](#game-flow)
     - [User Interface:](#user-interface)
@@ -153,7 +153,7 @@ To provide the user with an easy to navigate game that is both fun and education
 
 Colour palette from Coolors
 
-![Colour Palette](assest/images/colour_palette.png)
+![Colour Palette](assest/images/sections/color)
 
 - The colour scheme of the site is mainly lavender,green, dark green and Aquamarina with varying shades of green used to tie in with the nature imagery.
 
@@ -165,11 +165,11 @@ The Poppins font is the main font used throughout the whole website. This font w
 Sans Serif is used as a backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 ### Layout
-The site is a single page with 6 sections:
+The site is a single page with 3 sections:
   - Welcome area
   - Rules
   - Play game
-  - Game over and score
+
 
 **### Wireframes
 
@@ -179,13 +179,13 @@ Wireframes were produced using Balsamiq.
 
  <summary>Desktop Wireframe</summary>
 
-![Desktop Wireframe](desktop_wireframe.png)
+![Desktop Wireframe]()
  </details>
 
  <details>
     <summary>Mobile Wireframe</summary>
 
-![Mobile Wireframe](mobile_wireframe.png)
+![Mobile Wireframe]()
  </details>
 
 **
@@ -196,27 +196,27 @@ Wireframes were produced using Balsamiq.
 The landing page of the website has a very simple layout which includes a H1 heading stating and the name of the game and too large colourful interactive buttons that are easy for user to select. The user is given too options to choose from:
  - Rules
  - Play
-  
 
- ![Landing Page](landing_page.png)
+
+ ![Landing Page](assest/images/sections/landing-page.png)
 
 ### How to Play Page
 
 If the user clicks the "Rules" button the instructions section appears and the user can read the main rules of the game. The back button will take them back to the welcome area.
 
-![Instructions](/instructions_section.png)
+![Instructions](assest/images/sections/instructions-rules.png)
 
 ### Game Selection
 
 - There are one levels to choose. 
 
-![Game Selection](game_selection.png)
+![Game Selection](assest/images/sections/game-section.png)
 
 <details>
 
 <summary>Mobile Game Selection</summary>
 
-![Mobile Game Selection](mobile_game_selection.png)
+![Mobile Game Selection]()
 
  </details>
 
@@ -243,7 +243,7 @@ If the user clicks the "Rules" button the instructions section appears and the u
 ### Game Over
 - The section shows the players score which includes their time, number of incorrect attempts.
 
-![Game Over](win_game_section.png)
+![Game Over](assest/images/sections/game-over.png)
 
 ### Features Left to Implement
 - Email JS to signup to newsletter
@@ -254,10 +254,10 @@ If the user clicks the "Rules" button the instructions section appears and the u
 ### Validator Testing
 - #### HTML
     - No errors were returned when passing through the official W3C Markup Validator
-        - [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Faliokeeffe.github.io%2FThe-Animal-Association-Game%2F)
+        - [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnoah-samawi.github.io%2FPokemon-Cards-Match-pp2%2F)
 - #### CSS
     - No errors were found when passing through the official W3C CSS Validator 
-        - [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faliokeeffe.github.io%2FThe-Animal-Association-Game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+        - [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnoah-samawi.github.io%2FPokemon-Cards-Match-pp2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - #### Javascript
     - No errors or warnings were returned when passing through the the [JSHint Validator](https://jshint.com/)
 
