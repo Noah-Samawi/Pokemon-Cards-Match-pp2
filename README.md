@@ -25,7 +25,7 @@ The goal of the game is to match pairs of cards with identical images.
 - If two clicked cards have the same image, they remain face up, and the player scores a match.
 - If the images are different, both cards are flipped face down, and the player accumulates an error.
 
-### Errors:
+### Incorrect Attempts:
 
 - The number of errors is tracked by the errors variable.
 - For each unsuccessful attempt (pair of non-matching cards), the error count increases.
@@ -35,6 +35,7 @@ The goal of the game is to match pairs of cards with identical images.
 
 - The game continues until all pairs of cards are successfully matched.
 - Players aim to complete the game with the fewest errors possible.
+- when the game done a Show Modal appears with Game Over, Timer result und Incorrect attempts.
 
 ### Game Flow:
 
@@ -61,12 +62,6 @@ The goal of the game is to match pairs of cards with identical images.
 
 - The game is considered complete when all pairs are successfully matched.
 - Remember, the success of the game depends on memory and pattern recognition skills. Players aim to minimize errors and complete the game as efficiently as possible.
-
-
-
-
-
-
 
 
 The live link can be found here - [ The Pokémon Cards Match Game]( https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/)
