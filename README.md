@@ -153,7 +153,7 @@ To provide the user with an easy to navigate game that is both fun and education
 
 Colour palette from Coolors
 
-![Colour Palette](assest/images/sections/color)
+![Colour Palette](assest/images/sections/color-palette.png)
 
 - The colour scheme of the site is mainly lavender,green, dark green and Aquamarina with varying shades of green used to tie in with the nature imagery.
 
@@ -197,7 +197,6 @@ The landing page of the website has a very simple layout which includes a H1 hea
  - Rules
  - Play
 
-
  ![Landing Page](assest/images/sections/landing-page.png)
 
 ### How to Play Page
@@ -213,32 +212,6 @@ If the user clicks the "Rules" button the instructions section appears and the u
 ![Game Selection](assest/images/sections/game-section.png)
 
 <details>
-
-<summary>Mobile Game Selection</summary>
-
-![Mobile Game Selection]()
-
- </details>
-
-### Game Area
-
-- A 4x5 grid layout representing the game board.
-- Pokémon cards with various attributes and images for matching.
-- Shuffle and arrangement of cards at the beginning of each game.
-- Error tracking for mismatched card selections.
-- Simple and intuitive user interface.
-
-![Game](game.png)
-
-<details>
-
- <summary>Mobile Game</summary>
-
-![Mobile Game](game.png)
-
-![Mobile Landscape Game](landscape_game.png)
-
- </details>
 
 ### Game Over
 - The section shows the players score which includes their time, number of incorrect attempts.
