@@ -137,7 +137,7 @@ To provide the user with an easy to navigate game that is both fun and education
 
 
 - ### Returning user
-  - As a returning user I want to be able to play the same game without getting the same selection of animals.
+  - As a returning user I want to be able to play the same game without getting the same selection of Pokemon.
   - As a returning user I want to be able to play a different game (different habitat).
   - As a returning user I want to be able to save my score to the leaderboard.
 
@@ -242,11 +242,11 @@ If the user clicks the "Rules" button the instructions section appears and the u
 
 Mobile Lighthouse Score
 
-![Mobile Lighthouse Score](docs/readme_images/mobile_lighthouse.png)
+![Mobile Lighthouse Score](assest/images/sections/mobile_lighthouse.png)
 
 Desktop Lighthouse Score
 
-![Desktop Lighthouse Score](docs/readme_images/desktop_lighthouse.png)
+![Desktop Lighthouse Score](assest/images/sections/desktop_lighthouse.png)
 
 ### Input Testing
 - The username text input has been tested to ensure it won't save to the leaderboard unless text is inputted into the field.
@@ -272,24 +272,6 @@ Desktop Lighthouse Score
 - The website was viewed on a variety of devices such as Desktop, Laptop, iPhone 8, iPhoneX and iPad to ensure responsiveness on various screen sizes in both portrait and landscape mode. The website performed as intended. The responsive design was also checked using Chrome developer tools across multiple devices with structural integrity holding for the various sizes.
 - I also used the following website to test responsiveness:
     - [Responsinator]()
-
-### Fixed Bugs
-
-#### SetTimeout() method on incorrect cards
-- When the user selects an incorrect animal during the game a shake animation CSS rule is added to the animal card using a click listener. 
-- When testing the game I noticed that once the card has been clicked once, the shake animation didn't fire on subsequent clicks. 
-- In order to fix this I added the setTimeout() method to call a function to remove the CSS class after half a second (sufficient time for the animation to finish). This meant that for subsequent incorrect clicks, the shake animation rule could be added to the card again meaning that the card shakes each time it is clicked.
-
-#### Making a Deep Clone of an Object
-- In order to avoid having duplicated Pokémon Cards Matc showing in a game, each time an Pokémon card is written to the DOM it is spliced out of the Pokémon object. In order to avoid altering the original Pokémon card object I needed to first make a clone of the object and splice the Pokémon card out of the new object instead. 
-- To do this, I first used the spread operator however I quickly noticed that I was not getting the results I expected and the original object was still being changed when I spliced the cloned object. 
-- Upon researching this I realised the issue was that my Pokémon card object was actually a nested object. When you have a nested object and you copy it, nested objects inside that object will not be copied. Therefore, if you change the nested object, you will change it for both instances.
-- To fix this I had to make a deep clone of the nested object by stringifying the object and parsing it right after - JSON.parse(JSON.stringify(a)). The following article was very useful : [How to differentiate between deep and shallow copies in JavaScript](https://www.freecodecamp.org/news/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd/)
-
-#### Username Input Data Validation
-- In order to prevent the user saving a blank username to the leaderboard I wrote javaScript to prevent the score saving to the leaderboard if the text input value equaled an empty string. 
-- However when I put my project into the peer review slack channel one of my peers kindly tested this validation and was able to save a blank username by inputting an empty space and then saving.
-- In order to fix this I did a bit of research and found that the trim function could be used to prevent whitespace from being saved. I was able to amend my function to include this and now the username will only save if a character is inputted.
 
 ### Known Bugs
 There are no known bugs.
@@ -346,22 +328,14 @@ To clone this repository follow the below steps:
 All images and videos were sourced from:
  - [Freepik](https://www.freepik.com/home)
 
-With thanks to the below amazing artists:
-- @pikisuperstar - Farm background
-- @fahreza-design - Sea background
-- @freepik - Jungle backgounds
-- @brgfx - Safari background
-- @inspiring - Animal vectors
-- @pchvector - Marine animal vectors
-- @terdpongvector - Animal Vectors 
-
 ### Resources Used
 
 - [W3Schools](https://www.w3schools.com/)  
 - [Stack Overflow](https://stackoverflow.com/)
 - The following article was very helpful in understanding shallow vs deep clones and how to clone a nested object - [How to differentiate between deep and shallow copies in JavaScript](https://www.freecodecamp.org/news/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd/).
 - The code for building the leaderboard using local storage was inspired by the following tutorial which I then  adapted for my own game (episodes 8 & 9) - [Build a Quiz App with HTML CSS AND Javascript - By James Q Quick (episodes 8 & 9)](https://www.youtube.com/playlist?list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF).
-- I used the Fisher Yates Shuffle in order to shuffle the correct and incorrect animal cards which I learned about in this tutorial - [Shuffle an array](https://javascript.info/task/shuffle).
+- I used the Fisher Yates Shuffle in order 
+- [Shuffle an array](https://javascript.info/).
 - The following post was useful in validating my username input - [How to prevent empty field being saved](https://teamtreehouse.com/community/how-do-you-prevent-an-empty-input-field-being-added-to-my-todo-list).
 - I used the following article to learn about the setTimeout method in order to remove classes from elements after a certain period of time had lapsed. - [Delay, Sleep, Pause, & Wait in JavaScript](https://www.sitepoint.com/delay-sleep-pause-wait/).
 - Inspiration for the stopwatch used in the game came from this post which I then adapted for my own game. - [Create a Simple Stopwatch using JavaScript](https://dev.to/shantanu_jana/create-a-simple-stopwatch-using-javascript-3eoo).
