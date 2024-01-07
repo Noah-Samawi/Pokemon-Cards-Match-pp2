@@ -23,14 +23,16 @@
       sizes="32x32"
       href="assest/images/favicon/favicon-32x32.png"
     />
+    <style>
+      
+    </style>
   </head>
 
   <body>
     <!-- Landing page welcome section -->
     <section id="welcome-area">
       <h1 class="heading">Welcome to the Pokémon Cards Match</h1>
-      <label for="user"></label>
-
+   
       <!-- Content wrapper game backgrounds -->
       <div class="content-wrapper" id="scene-background"></div>
       <div class="button-outer">
@@ -42,14 +44,7 @@
           Rules
         </button>
         <br />
-        <p id="crab-text">Hi, I'm Poki.<br />What's your name?</p>
-        <input
-          type="text"
-          id="user"
-          name="user"
-          maxlength="10"
-          placeholder="Type your name..."
-        />
+        <p id="crab-text">Hi, Welcome<br />Have fun with playing Pokémon Cards Match</p>
         
         <button class="button" id="play-btn" aria-label="Play the game">
           Play
@@ -63,11 +58,11 @@
         <h2 class="select-level">How to Play</h2>
       </div>
       <div class="instructions">
-        <p>
-         The goal of the game is to match pairs of cards with identical images.
+        
+         <p>The goal of the game is to match pairs of cards with identical images.
          Cards are randomly shuffled and placed face down on the board at the
             start of the game.
-        </p>
+         </p>
         <ol>
           <li>Players reveal cards by clicking on them.</li>
           <li>
@@ -85,9 +80,9 @@
       </div>
       <!-- Error messages for log-in-->
       
-      <div class="button-outer">
+      <div class="rules-button-outer">
         <a href="index.html" aria-label="Go back to home page">
-          <div class="button">Back</div>
+          <div class="rules-button">Back</div>
         </a>
       </div>
     </section>
@@ -97,7 +92,7 @@
     <section class="hide" id="board-wrapper">
       <canvas id="canvas" style="display: none"></canvas>
       <!-- Information bar -->
-      <div class="content-wrapper game">
+      <div class="content-wrapper ">
       <div class="info-bar" id="info-bar">
         <div class="home-button">
             <a href="index.html" aria-label="Go to the home page"><i class="fas fa-home" aria-hidden="true"></i></a>
@@ -116,9 +111,8 @@
       <div class="scores-wrapper">
         <!-- Final Game scores -->
         <div class="final-scores">
-          
           <p id="final-time"></p>
-            <h2>Incorrect Attempts: <span id="errors">0</span></h2>
+            <h3>Incorrect Attempts: <span id="errors">0</span></h3>
         </div>
       </div>
           
@@ -126,31 +120,7 @@
       <div id="board"></div>
     </div>
     </section>
-     <!-- Gameover Section -->
-     <section class="hide" id="gameover">
-        <div class="box-title">
-            <h2>Game Over</h2>
-        </div>
-        <div class="scores-wrapper">
-            <!-- Final Game scores -->
-            <div class="final-scores">
-                <p>Your Time:</p>
-                <p id="final-t"></p>
-            </div>
-        </div> 
-            <div class="final-Attempts">
-                <h2>Incorrect Attempts: <span id="errors">0</span></h2>
-                <p id="final-count"></p>
-            </div>
-        
-        <div class="button-outer">
-            <a href="index.html" aria-label="Go back to home page">
-                <div class='button'>Play Again</div>
-            </a>
-        </div>
-    
-    </section>
-
+     
     <!-- font awesome script -->
     <script
       src="https://kit.fontawesome.com/08445b6b20.js"
