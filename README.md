@@ -71,7 +71,7 @@ The goal of the game is to match pairs of cards with identical images.
 
 The live link can be found here - [ The Pokémon Cards Match Game]( https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/)
 
-![APokémon Cards Match Game Am I Responsive Image](assests/images/am_i_responsive.png) 
+![APokémon Cards Match Game Am I Responsive Image](https://noah-samawi.github.io/Pokemon-Cards-Match-pp2/) 
 
 Table of Contents
 
