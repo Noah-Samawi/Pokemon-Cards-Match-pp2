@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });  
      
 
-
 // Initialize variables to keep track of errors and matches
 var errors = 0;
 let matches = 0;
@@ -114,18 +113,13 @@ function startGame() {
         board.push(row);
     }
 
-// After a delay of 1000 milliseconds (1 second), execute the hideCards function
-setTimeout(hideCards, 1000);
 
-// Add the 'no-background' class to the element with id 'scene-background'
-document.getElementById('scene-background').classList.add('no-background');
-
-// Remove the 'hide' class from the element with id 'board-wrapper'
-document.getElementById('board-wrapper').classList.remove('hide');
-
-// Add the 'hide' class to the element with id 'welcome-area'
-document.getElementById('welcome-area').classList.add('hide');
-
+    // After a delay of 1000 milliseconds (1 second), hide the cards
+    setTimeout(hideCards, 1000);
+    document.getElementById('scene-background').classList.add('no-background');
+    document.getElementById('board-wrapper').classList.remove('hide');
+    document.getElementById('welcome-area').classList.add('hide');
+}
 
 // Function to restart the game
 function reStartGame() {
@@ -275,9 +269,9 @@ function showModal() {
 }
 
 
+
 // Add event listener to the element with id 'resetBtn' to restart the game when clicked
 document.getElementById('resetBtn').addEventListener('click', reStartGame);
 
 // Add event listener to the element with id 'play-btn' to start the game when clicked
-
 document.getElementById('play-btn').addEventListener('click', startGame);
