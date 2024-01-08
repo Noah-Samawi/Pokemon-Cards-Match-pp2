@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });  
      
- // Game section
-// Game section
+
+
+// Initialize variables to keep track of errors and matches
 var errors = 0;
 let matches = 0;
+
+// List of card types
 var cardList = [
     "darkness",
     "double",
@@ -29,7 +32,9 @@ var cardList = [
     "metal",
     "psychic",
     "water"
-]
+];
+
+// Declare variables to be used in the game
 var cardSet;
 var board = [];
 var rows = 4;
@@ -37,21 +42,29 @@ var columns = 5;
 var card1Selected;
 var card2Selected;
 
-
+// Execute the shuffleCards function when the window has finished loading
 window.onload = function () {
     shuffleCards();
 };
 
-// 
 
+// Function to start the timer using setInterval
 function startTimer() {
+    // Set an interval to execute the provided function every 1000 milliseconds (1 second)
     timerInterval = setInterval(() => {
+        // Increment the timer variable representing elapsed seconds
         timer++;
+
+        // Calculate minutes and seconds from the total elapsed time
         const minutes = Math.floor(timer / 60);
         const seconds = timer % 60;
+
+        // Update the content of the 'timer' element to display the formatted time
         document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }, 1000);
 }
+
+
 function shuffleCards() {
     // Duplicate the cardList to create a set of cards by concatenating it with itself
     cardSet = cardList.concat(cardList);
@@ -101,26 +114,42 @@ function startGame() {
         board.push(row);
     }
 
-    // Log the initial state of the board to the console
-    //console.log(board);
+// After a delay of 1000 milliseconds (1 second), execute the hideCards function
+setTimeout(hideCards, 1000);
 
-    // After a delay of 1000 milliseconds (1 second), hide the cards
-    setTimeout(hideCards, 1000);
-    document.getElementById('scene-background').classList.add('no-background');
-    document.getElementById('board-wrapper').classList.remove('hide');
-    document.getElementById('welcome-area').classList.add('hide');
-}
+// Add the 'no-background' class to the element with id 'scene-background'
+document.getElementById('scene-background').classList.add('no-background');
 
-function reStartGame(){
+// Remove the 'hide' class from the element with id 'board-wrapper'
+document.getElementById('board-wrapper').classList.remove('hide');
+
+// Add the 'hide' class to the element with id 'welcome-area'
+document.getElementById('welcome-area').classList.add('hide');
+
+
+// Function to restart the game
+function reStartGame() {
+    // Reset error and match counters to zero
     errors = 0;
-    matches = 0
+    matches = 0;
+
+    // Clear the content of the 'board' element
     document.getElementById("board").innerHTML = '';
+
+    // Reset the error display to zero
     document.getElementById('errors').innerText = 0;
+
+    // Stop the timer
     stopTimer();
+
+    // Shuffle the cards for a new game
     shuffleCards();
+
+    // Start a new game
     startGame();
 }
 
+// Function to hide the cards
 function hideCards() {
     // Loop through each row (r) and column (c) in the game grid
     for (let r = 0; r < rows; r++) {
@@ -134,7 +163,7 @@ function hideCards() {
     }
 }
 
-
+// Function to select the cards
 function selectCard() {
     // Check if the source (image URL) of the clicked card includes the string "back"
     if (this.src.includes("back")) {
@@ -169,9 +198,10 @@ function selectCard() {
     }
 }
 
+// Function to update the game state based on selected cards
 function update() {
     // If the selected cards have different images, flip both cards back
-    if (card1Selected.src != card2Selected.src) {
+    if (card1Selected.src !== card2Selected.src) {
         // Set the source of both selected cards to "back.jpg"
         card1Selected.src = "back.jpg";
         card2Selected.src = "back.jpg";
@@ -179,9 +209,9 @@ function update() {
         // Increment the 'errors' counter and update the corresponding HTML element
         errors += 1;
         document.getElementById("errors").innerText = errors;
-    }
-    else{
-        matches = matches + 1;
+    } else {
+        // If the selected cards have the same image, increment the 'matches' counter
+        matches += 1;
     }
 
     // Reset the references to the selected cards
@@ -198,17 +228,28 @@ function checkGameWon() {
     }
 }
 
-function stopTimer(){
+// Function to stop the timer
+function stopTimer() {
+    // Clear the interval previously set by setInterval
     clearInterval(timerInterval);
+
+    // Reset the timer variable to zero
     timer = 0;
+
+    // Set the timerInterval variable to null to indicate that the timer is stopped
     timerInterval = null;
 }
 
+
+// Function to display a modal with game results
 function showModal() {
+    // Stop the timer when the game is over
     stopTimer();
+
+    // Get the timer result text
     const timerText = document.getElementById('timer').textContent;
 
-    // Create a custom dialog box
+    // Create a custom dialog box element
     const modal = document.createElement('div');
     modal.className = 'dialog';
 
@@ -217,11 +258,14 @@ function showModal() {
     modalText.innerHTML = `<h3> Game Over </h3> <br> <h6>Timer result: ${timerText} </h6> <br> <h6>Incorrect attempts: ${errors} </h6>`;
     modal.appendChild(modalText);
 
-    // Add a button to close the dialog box
+    // Add a button to close the dialog box and restart the game
     const closeButton = document.createElement('button');
     closeButton.textContent = 'Play Again';
     closeButton.onclick = () => {
+        // Remove the modal from the document body
         document.body.removeChild(modal);
+
+        // Restart the game
         reStartGame();
     };
     modal.appendChild(closeButton);
@@ -230,5 +274,10 @@ function showModal() {
     document.body.appendChild(modal);
 }
 
+
+// Add event listener to the element with id 'resetBtn' to restart the game when clicked
 document.getElementById('resetBtn').addEventListener('click', reStartGame);
+
+// Add event listener to the element with id 'play-btn' to start the game when clicked
+
 document.getElementById('play-btn').addEventListener('click', startGame);
