@@ -63,7 +63,11 @@ function startTimer() {
     }, 1000);
 }
 
-
+/**
+ * in the shuffleCards cardList in the current game using the Fischer Yates Shuffle 
+ * redit to this tutorial which I adapted for my own game: 
+ * https://www.youtube.com/watch?v=hGRzVoaXqJI
+ */
 function shuffleCards() {
     // Duplicate the cardList to create a set of cards by concatenating it with itself
     cardSet = cardList.concat(cardList);
@@ -234,8 +238,11 @@ function stopTimer() {
     timerInterval = null;
 }
 
-
-// Function to display a modal with game results
+/**
+ * Function to display a modal with game results
+ * Credit to this tutorial which I adapted for game: 
+ * https://www.youtube.com/watch?v=hGRzVoaXqJI
+ */
 function showModal() {
     // Stop the timer when the game is over
     stopTimer();
